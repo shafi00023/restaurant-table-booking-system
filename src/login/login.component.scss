@@ -1,0 +1,43 @@
+.login-main-container {
+  display: flex;
+  .login-bg-container {
+    background-image: url(../assets/login-bg.jpg);
+    width: 70%;
+    height: 100vh;
+    background-size: cover;
+  }
+  .login-form-container {
+    width: 30%;
+    margin: 30px;
+    .form-group {
+      margin-bottom: 20px;
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      input[type="email"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        box-sizing: border-box;
+      }
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #795548;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #7c3921;
+      }
+    }
+  }
+}
