@@ -1,0 +1,23 @@
+.sidebar-wrapper {
+  width: 270px;
+  background-color: #f8f9fa;
+  ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    height: calc(100vh - 60px);
+    li {
+      padding: 30px;
+      border-bottom: 1px solid #ccc;
+      cursor: pointer;
+      color: #495057;
+      i {
+        padding-right: 15px;
+      }
+      &.active {
+        background-color: #ffc107;
+        color: white;
+      }
+    }
+  }
+}
