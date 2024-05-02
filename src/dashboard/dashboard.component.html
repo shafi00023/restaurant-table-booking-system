@@ -1,0 +1,14 @@
+<app-header></app-header>
+<div class="Main-dashboard-container">
+    <app-sidebar (changeActiveItem)="changeActiveItem($event)"></app-sidebar>
+
+    <div class="switch-tabs">
+        <div *ngIf="activeItem === 'dashboard'">
+            <app-previous-booking></app-previous-booking>
+        </div>
+
+        <div *ngIf="activeItem === 'bookTable'">
+            <app-book-table></app-book-table>
+        </div>
+    </div>
+</div>

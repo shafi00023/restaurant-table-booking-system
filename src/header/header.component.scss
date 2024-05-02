@@ -1,0 +1,30 @@
+header {
+  height: 60px;
+  background-color: #ff6347;
+  color: #fff;
+  padding: 0 35px;
+  .header-main-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  .user-section {
+    display: flex;
+    height: 60px;
+    justify-content: flex-end;
+    align-items: center;
+    span {
+      padding: 10px;
+    }
+  }
+  p {
+    margin: 0;
+    font-family: cursive;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    img {
+      height: 35px;
+      padding-right: 15px;
+    }
+  }
+}

@@ -12,9 +12,10 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   constructor(private router: Router) { }
   register() {
-   
       this.router.navigate(["/register"]);
-    
+  }
+  login(){
+    this.router.navigate(["/dashboard"]);
   }
 
 }

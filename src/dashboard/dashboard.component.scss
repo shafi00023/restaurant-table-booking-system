@@ -1,0 +1,8 @@
+.Main-dashboard-container {
+  display: flex;
+  .switch-tabs {
+    width: calc(100% - 270px);
+    background-color: #fff;
+    padding: 30px;
+  }
+}
