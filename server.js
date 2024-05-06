@@ -30,6 +30,13 @@ app.post("/api/register", (req, res) => {
   res.status(201).json({ message: "User registered successfully" });
 });
 
+// Endpoint to fetch all users
+app.get("/api/users", (req, res) => {
+  // Read users from db.json
+  const users = JSON.parse(fs.readFileSync("db.json", "utf8"));
+  res.json(users);
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
