@@ -1,0 +1,8 @@
+<div class="sidebar-wrapper">
+    <ul>
+        <li [class.active]="activeItem === 'dashboard'" (click)="setActiveItem('dashboard')"><i
+                class="fa-solid fa-gauge"></i>Dashboard</li>
+        <li [class.active]="activeItem === 'bookTable'" (click)="setActiveItem('bookTable')"><i
+                class="fa-solid fa-utensils"></i>Book Table</li>
+    </ul>
+</div>

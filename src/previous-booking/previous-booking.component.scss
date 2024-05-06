@@ -1,0 +1,22 @@
+.reservation {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #333;
+  }
+
+  .reservation-details {
+    p {
+      margin: 0;
+      line-height: 1.5;
+
+      strong {
+        font-weight: bold;
+      }
+    }
+  }
+}
