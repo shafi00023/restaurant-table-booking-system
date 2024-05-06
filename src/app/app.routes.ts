@@ -4,6 +4,8 @@ import { RegisterComponent } from '../register/register.component';
 import { NgModule } from '@angular/core';
 import { DashboardComponent } from '../dashboard/dashboard.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './core/api/register/api.service';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
@@ -13,7 +15,8 @@ export const routes: Routes = [
   ];
   
   @NgModule({
-    imports: [RouterModule.forRoot(routes),BrowserModule ],
+    imports: [RouterModule.forRoot(routes),BrowserModule ,HttpClientModule ],
+    providers: [ApiService],
     exports: [RouterModule]
   })
   export class AppRoutingModule { }
