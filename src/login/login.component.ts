@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import {  LoginService } from '../app/core/api/login/api.service';
 
 
 @Component({
@@ -13,29 +14,23 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.scss'
 })
 export class LoginComponent {
-  constructor(private router: Router,private http: HttpClient) { }
-  register() {
-      this.router.navigate(["/register"]);
-  }
+  constructor(private router: Router, private http: HttpClient,private loginService: LoginService) { }
+  
   email: string = '';
   password: string = '';
   errorMessage: string = '';
+  register(){
+    this.router.navigate(['/register']);
+  }
 
-
-  login() {
-    this.http.get<any[]>('/api/users').subscribe(
-      (users) => {
-        const user = users.find(u => u.email === this.email && u.password === this.password);
-        if (user) {
-          console.log('Login successful');
-        } else {
-          this.errorMessage = 'Invalid username or password';
-        }
+  login(): void {
+    this.loginService.loginUser({ email: this.email, password: this.password }).subscribe(
+      (response) => {
+        this.router.navigate(['/dashboard']);
       },
       (error) => {
-        console.error('Error fetching users:', error);
+        this.errorMessage = 'Invalid email or password. Please try again.';
       }
     );
   }
-
 }

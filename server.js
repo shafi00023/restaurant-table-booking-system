@@ -38,6 +38,7 @@ app.post("/api/register", (req, res) => {
 app.get("/api/users", (req, res) => {
   // Read users from db.json
   const users = JSON.parse(fs.readFileSync("db.json", "utf8"));
+  console.log("users", users);
   res.json(users);
 });
 
