@@ -2,22 +2,26 @@
   {
     "username": "john_doe",
     "email": "john@example.com",
-    "password": "password123"
+    "password": "password123",
+    "contact": "8709085058"
   },
   {
     "username": "example_user",
     "email": "user@example.com",
-    "password": "password123"
+    "password": "password123",
+    "contact": "8709085058"
   },
   {
     "username": "demo",
     "email": "demo@example.com",
-    "password": "demo123"
+    "password": "demo123",
+    "contact": "8709085058"
   },
   {
     "username": "demo1",
     "email": "demo1@example.com",
-    "password": "demo123"
+    "password": "demo123",
+    "contact": "8709085058"
   },
   {
     "username": "demo3",
@@ -54,5 +58,11 @@
     "email": "email@example.com",
     "password": "demo",
     "contact": "8709085058"
+  },
+  {
+    "username": "aesha.darji",
+    "email": "aesha.darji@itgurussoftware.com",
+    "password": "aesh",
+    "contact": "7667564345"
   }
 ]
