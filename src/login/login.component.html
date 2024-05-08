@@ -4,20 +4,21 @@
         <div class="login-main-form-container">
             <h2 class="app-name">Restaurant Table booking </h2>
             <h2>Login</h2>
-            <form>
+            <form (submit)="login()">
                 <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" [(ngModel)]="email" required />
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" [(ngModel)]="email" required />
                 </div>
                 <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" [(ngModel)]="password" required />
+                  <label for="password">Password</label>
+                  <input type="password" id="password" name="password" [(ngModel)]="password" required />
                 </div>
-
-                <button type="submit" (click)="login()">Login</button>
+              
+                <button type="submit">Login</button>
                 <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
-                <p>Don't have account ? <a (click)="register()">Create new account</a></p>
-            </form>
+                <p>Don't have an account? <a href="#" (click)="register()">Create a new account</a></p>
+              </form>
+              
         </div>
 
     </div>

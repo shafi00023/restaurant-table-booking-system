@@ -33,6 +33,25 @@ app.post("/api/register", (req, res) => {
 
   res.status(201).json({ message: "User registered successfully" });
 });
+// Endpoint to handle POST requests to /api/users with credentials
+app.post("/api/users", (req, res) => {
+  const { email, password } = req.body;
+
+  // Read users from db.json
+  const users = JSON.parse(fs.readFileSync("db.json", "utf8"));
+
+  // Find user with matching email and password
+  const user = users.find(
+    (user) => user.email === email && user.password === password
+  );
+
+  if (!user) {
+    return res.status(401).json({ error: "Invalid email or password" });
+  }
+
+  // Return the user details
+  res.status(200).json(user);
+});
 
 // Endpoint to fetch all users
 app.get("/api/users", (req, res) => {
