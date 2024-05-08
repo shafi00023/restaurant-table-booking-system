@@ -1,10 +1,14 @@
 const express = require("express");
 const fs = require("fs");
+const cors = require("cors"); // Import cors
 const app = express();
 const PORT = 3000;
 
 // Middleware to parse JSON bodies
 app.use(express.json());
+
+// Allow requests from all origins
+app.use(cors());
 
 // Endpoint to handle user registration
 app.post("/api/register", (req, res) => {

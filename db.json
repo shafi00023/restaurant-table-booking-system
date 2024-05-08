@@ -48,5 +48,11 @@
     "email": "demo8@demo.com",
     "password": "sh",
     "contact": "8709085058"
+  },
+  {
+    "username": "Admin",
+    "email": "email@example.com",
+    "password": "demo",
+    "contact": "8709085058"
   }
 ]
