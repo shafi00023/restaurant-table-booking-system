@@ -36,5 +36,17 @@
     "email": "demo7@example.com",
     "password": "demo123",
     "contact": "8709085058"
+  },
+  {
+    "username": "super_admin",
+    "email": "demo@demo.com",
+    "password": "sh",
+    "contact": "8709085058"
+  },
+  {
+    "username": "super_admin",
+    "email": "demo8@demo.com",
+    "password": "sh",
+    "contact": "8709085058"
   }
 ]
