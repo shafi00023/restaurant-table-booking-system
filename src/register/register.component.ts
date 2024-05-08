@@ -22,6 +22,8 @@ export class RegisterComponent {
     this.apiService.registerUser(this.user).subscribe(
       response => {
         this.message = response.message;
+        alert("user created successfully...!!")
+        this.clearInputs();
       },
       error => {
         this.message = error.error.error;
@@ -31,5 +33,8 @@ export class RegisterComponent {
 
   login() {
     this.router.navigate(["/login"]);
+  }
+  clearInputs() {
+    this.user = { username: '', email: '', password: '', contact: '' };
   }
 }
