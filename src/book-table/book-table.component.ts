@@ -25,11 +25,15 @@ export class BookTableComponent {
     this.bookingService.bookTable(this.bookingData)
       .subscribe(
         data => {
-          console.log('Table booked successfully:', data);
+          alert("Table booked successfully")
+          this.clearInputs();
         },
         error => {
           console.error('Failed to book table:', error);
         }
       );
+  }
+  clearInputs() {
+    this.bookingData = { name: '', email: '', date: '', time: '', partySize:'' };
   }
 }

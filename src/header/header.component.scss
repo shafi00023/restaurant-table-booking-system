@@ -3,6 +3,8 @@ header {
   background-color: #ff6347;
   color: #fff;
   padding: 0 35px;
+  position: fixed;
+  width: 100%;
   .header-main-wrapper {
     display: flex;
     justify-content: space-between;

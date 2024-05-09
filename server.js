@@ -101,6 +101,13 @@ function generateBookingId() {
   return Math.floor(100000 + Math.random() * 900000);
 }
 
+// Endpoint to fetch all bookings
+app.get("/api/getBooking", (req, res) => {
+  const booking = JSON.parse(fs.readFileSync("booking.json", "utf8"));
+  console.log("booking", booking);
+  res.json(booking);
+});
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
