@@ -1,10 +1,13 @@
-<form class="booking-form">
+<form class="booking-form" (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="bookingData.name" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="bookingData.email" required>
     <label for="date">Date:</label>
-    <input type="date" id="date" name="date" required>
+    <input type="date" id="date" name="date" [(ngModel)]="bookingData.date" required>
     <label for="time">Time:</label>
-    <input type="time" id="time" name="time" required>
-    <label for="guests">Number of Guests:</label>
-    <input type="number" id="guests" name="guests" min="1" required>
-    <button type="button" id="check-availability">Check Availability</button>
+    <input type="time" id="time" name="time" [(ngModel)]="bookingData.time" required>
+    <label for="partySize">Number of Guests:</label>
+    <input type="number" id="partySize" name="partySize" [(ngModel)]="bookingData.partySize" min="1" required>
     <button type="submit">Book Table</button>
 </form>
