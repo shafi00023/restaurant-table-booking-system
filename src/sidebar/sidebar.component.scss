@@ -1,6 +1,8 @@
 .sidebar-wrapper {
   width: 270px;
   background-color: #f8f9fa;
+  position: fixed;
+  margin-top: 60px;
   ul {
     margin: 0;
     list-style: none;

@@ -1,13 +1,26 @@
 [
   {
-    "bookingId": 827002
+    "bookingId": 582203,
+    "name": "aesha",
+    "email": "aesha.darji@itgurussoftware.com",
+    "date": "2024-05-10",
+    "time": "05:33",
+    "partySize": 6
   },
   {
-    "bookingId": 390353,
-    "name": "demo3",
-    "email": "demo8@example.com",
-    "date": "demo123",
-    "time": "8709085058",
-    "partySize": "2"
+    "bookingId": 687020,
+    "name": "aesha patel",
+    "email": "aesha.darji@itgurussoftware.com",
+    "date": "2024-05-10",
+    "time": "20:45",
+    "partySize": 5
+  },
+  {
+    "bookingId": 481191,
+    "name": "jaini",
+    "email": "jaini@gmail.com",
+    "date": "2024-05-11",
+    "time": "06:48",
+    "partySize": 20
   }
 ]
