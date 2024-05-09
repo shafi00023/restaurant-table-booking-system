@@ -61,6 +61,46 @@ app.get("/api/users", (req, res) => {
   res.json(users);
 });
 
+// Endpoint to book a restaurant table
+app.post("/api/book-table", (req, res) => {
+  const { name, email, date, time, partySize } = req.body;
+
+  // Read existing bookings from booking.json
+  let bookings = [];
+  try {
+    bookings = JSON.parse(fs.readFileSync("booking.json", "utf8"));
+  } catch (error) {
+    console.error("Error reading booking.json:", error);
+  }
+
+  // Generate a unique booking ID
+  const bookingId = generateBookingId();
+
+  // Create new booking object
+  const newBooking = {
+    bookingId,
+    name,
+    email,
+    date,
+    time,
+    partySize,
+  };
+
+  // Add new booking to the bookings array
+  bookings.push(newBooking);
+
+  // Write updated bookings array back to booking.json
+  fs.writeFileSync("booking.json", JSON.stringify(bookings, null, 2));
+
+  res.status(201).json({ message: "Table booked successfully", bookingId });
+});
+
+// Function to generate a unique booking ID
+function generateBookingId() {
+  // Generate a random 6-digit number
+  return Math.floor(100000 + Math.random() * 900000);
+}
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
