@@ -18,4 +18,11 @@ export class BookingService {
   getAllBooking(): Observable<any[]> {
     return this.http.get<any[]>(this.bookingURL);
   }
+  updateBooking(bookingId: string, updatedBooking: any): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/${bookingId}`, updatedBooking);
+  }
+
+  getBookingById(bookingId: string): Observable<any> {
+    return this.http.get<any>(`${this.apiUrl}/${bookingId}`);
+  }
 }

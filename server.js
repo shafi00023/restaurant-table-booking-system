@@ -111,7 +111,9 @@ app.put("/api/bookings/:id", (req, res) => {
   const bookings = JSON.parse(fs.readFileSync("booking.json", "utf8"));
 
   // Find the booking by ID
-  const bookingIndex = bookings.findIndex((booking) => booking.bookingId == bookingId);
+  const bookingIndex = bookings.findIndex(
+    (booking) => booking.bookingId == bookingId
+  );
 
   if (bookingIndex === -1) {
     return res.status(404).json({ error: "Booking not found" });
