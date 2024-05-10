@@ -17,10 +17,20 @@
   },
   {
     "bookingId": 481191,
-    "name": "jaini",
+    "name": "John Doe",
     "email": "jaini@gmail.com",
-    "date": "2024-05-11",
-    "time": "06:48",
-    "partySize": 20
+    "date": "2024-05-15",
+    "time": "18:00",
+    "partySize": 3,
+    "bookingStatus": "booked"
+  },
+  {
+    "bookingId": 968765,
+    "name": "demo3",
+    "email": "demo8@example.com",
+    "date": "demo123",
+    "time": "8709085058",
+    "partySize": "2",
+    "bookingStatus": "booked"
   }
 ]

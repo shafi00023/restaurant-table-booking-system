@@ -63,7 +63,7 @@ app.get("/api/users", (req, res) => {
 
 // Endpoint to book a restaurant table
 app.post("/api/book-table", (req, res) => {
-  const { name, email, date, time, partySize } = req.body;
+  const { name, email, date, time, partySize, bookingStatus } = req.body;
 
   // Read existing bookings from booking.json
   let bookings = [];
@@ -84,6 +84,7 @@ app.post("/api/book-table", (req, res) => {
     date,
     time,
     partySize,
+    bookingStatus,
   };
 
   // Add new booking to the bookings array
@@ -100,6 +101,30 @@ function generateBookingId() {
   // Generate a random 6-digit number
   return Math.floor(100000 + Math.random() * 900000);
 }
+
+// Endpoint to handle booking updates
+app.put("/api/bookings/:id", (req, res) => {
+  const bookingId = req.params.id;
+  const updatedBooking = req.body;
+
+  // Read existing bookings from booking.json
+  const bookings = JSON.parse(fs.readFileSync("booking.json", "utf8"));
+
+  // Find the booking by ID
+  const bookingIndex = bookings.findIndex((booking) => booking.bookingId == bookingId);
+
+  if (bookingIndex === -1) {
+    return res.status(404).json({ error: "Booking not found" });
+  }
+
+  // Update the booking
+  bookings[bookingIndex] = { ...bookings[bookingIndex], ...updatedBooking };
+
+  // Write updated bookings array back to booking.json
+  fs.writeFileSync("booking.json", JSON.stringify(bookings, null, 2));
+
+  res.status(200).json({ message: "Booking updated successfully" });
+});
 
 // Endpoint to fetch all bookings
 app.get("/api/getBooking", (req, res) => {
