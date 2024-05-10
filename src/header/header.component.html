@@ -1,10 +1,13 @@
 <header>
     <div class="header-main-wrapper">
         <p><img src="../assets/salad.png" alt="icon" />ReserveEat</p>
-        <div class="user-section">
+        <div class="user-section" (click)="toggleDropdown()">
             <i class="fa-solid fa-circle-user"></i>
             <span>Adam Smith</span>
             <i class="fa-solid fa-caret-down"></i>
+            <div class="dropdown-menu" *ngIf="showDropdown">
+                <a (click)="signOut()">Sign Out</a>
+            </div>
         </div>
     </div>
 
