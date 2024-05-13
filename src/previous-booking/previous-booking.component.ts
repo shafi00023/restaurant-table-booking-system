@@ -18,17 +18,18 @@ export class PreviousBookingComponent {
   ngOnInit(): void {
     this.loadBookingData();
   }
-  editBooking(bookingId: any) {
-    console.log("edit booking clicked for booking id",bookingId);
-    this.router.navigate(['/booking-details', bookingId]);
+  editBooking(booking: any) {
+    console.log("edit booking clicked for booking id", booking.bookingId);
+    this.router.navigate(['/edit-booking', { booking: JSON.stringify(booking) }]);
   }
+  
 
   loadBookingData() {
     this.bookingService.getAllBooking().subscribe(
-      data => {
+      (data: any) => {
         this.bookingData = data;
       },
-      error => {
+      (error: any) => {
         console.error('Failed to fetch booking data:', error);
       }
     );

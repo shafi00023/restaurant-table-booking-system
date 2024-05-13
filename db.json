@@ -64,5 +64,11 @@
     "email": "aesha.darji@itgurussoftware.com",
     "password": "aesh",
     "contact": "7667564345"
+  },
+  {
+    "username": "user1",
+    "email": "user1@user.com",
+    "password": "demo",
+    "contact": "8709085058"
   }
 ]

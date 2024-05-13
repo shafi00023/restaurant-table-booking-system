@@ -6,14 +6,15 @@ import { DashboardComponent } from '../dashboard/dashboard.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './core/api/register/api.service';
-import { BookTableComponent } from '../book-table/book-table.component';
+// import { BookTableComponent } from '../book-table/book-table.component';
+import { EditBookingComponent } from './edit-booking/edit-booking.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path:'dashboard', component: DashboardComponent},
-    { path: 'booking-details/:id', component: BookTableComponent }
+    { path: 'edit-booking', component: EditBookingComponent }
   ];
   
   @NgModule({

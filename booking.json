@@ -32,5 +32,22 @@
     "time": "8709085058",
     "partySize": "2",
     "bookingStatus": "booked"
+  },
+  {
+    "bookingId": 814964,
+    "name": "demo3",
+    "email": "demo8@example.com",
+    "date": "demo123",
+    "time": "11:00 AM",
+    "partySize": "2",
+    "bookingStatus": "booked"
+  },
+  {
+    "bookingId": 347878,
+    "name": "Demo",
+    "email": "shafi.rahman@theaccessgroup.com",
+    "date": "2024-12-31",
+    "time": "12:59",
+    "partySize": 5
   }
 ]
