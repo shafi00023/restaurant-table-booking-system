@@ -5,6 +5,7 @@ import { LoginComponent } from "../login/login.component";
 import { RegisterComponent } from "../register/register.component";
 import { ApiService } from "./core/api/register/api.service";
 import { FormsModule } from "@angular/forms";
+import { AdminLoginComponent } from "../admin-login/admin-login.component";
 
 @Component({
   selector: "app-root",
@@ -15,7 +16,8 @@ import { FormsModule } from "@angular/forms";
     LoginComponent,
     RegisterComponent,
     RouterLink,
-    FormsModule
+    FormsModule,
+    AdminLoginComponent,
   ],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.scss",
