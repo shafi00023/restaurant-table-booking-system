@@ -1,12 +1,12 @@
 [
   {
     "bookingId": 582203,
-    "name": "Aesha",
+    "name": "aesha darji",
     "email": "aesha.darji@itgurussoftware.com",
-    "date": "2024-05-10",
-    "time": "05:33",
-    "partySize": 6,
-    "bookingStatus": "Booked"
+    "date": "2024-05-15",
+    "time": "08:36",
+    "partySize": "8",
+    "bookingStatus": "booked"
   },
   {
     "bookingId": 687020,
