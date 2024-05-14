@@ -4,7 +4,7 @@ import { SidebarComponent } from '../sidebar/sidebar.component';
 import { CommonModule } from '@angular/common';
 import { PreviousBookingComponent } from '../previous-booking/previous-booking.component';
 import { BookTableComponent } from '../book-table/book-table.component';
-import { EditBookingComponent } from '../app/edit-booking/edit-booking.component';
+import { EditBookingComponent } from '../edit-booking/edit-booking.component';
 
 @Component({
   selector: 'app-dashboard',

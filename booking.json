@@ -1,12 +1,12 @@
 [
   {
     "bookingId": 582203,
-    "name": "aesha",
+    "name": "Aesha",
     "email": "aesha.darji@itgurussoftware.com",
     "date": "2024-05-10",
     "time": "05:33",
     "partySize": 6,
-    "bookingStatus": "Confirmed"
+    "bookingStatus": "Booked"
   },
   {
     "bookingId": 687020,
@@ -30,8 +30,8 @@
     "bookingId": 968765,
     "name": "demo3",
     "email": "demo8@example.com",
-    "date": "demo123",
-    "time": "8709085058",
+    "date": "2024-05-13",
+    "time": "1: 00 Pm",
     "partySize": "2",
     "bookingStatus": "Booked"
   },
