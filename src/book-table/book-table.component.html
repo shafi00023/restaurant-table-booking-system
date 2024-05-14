@@ -1,13 +1,54 @@
-<form class="booking-form" (ngSubmit)="onSubmit()">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" [(ngModel)]="bookingData.name" required>
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" [(ngModel)]="bookingData.email" required>
-    <label for="date">Date:</label>
-    <input type="date" id="date" name="date" [(ngModel)]="bookingData.date" required>
-    <label for="time">Time:</label>
-    <input type="time" id="time" name="time" [(ngModel)]="bookingData.time" required>
-    <label for="partySize">Number of Guests:</label>
-    <input type="number" id="partySize" name="partySize" [(ngModel)]="bookingData.partySize" min="1" required>
-    <button type="submit">Book Table</button>
-</form>
+<app-header></app-header>
+<div class="Main-dashboard-container">
+<app-sidebar></app-sidebar>
+<div class="container switch-tabs">
+  <div class="row">
+    <div class="col-md-12">
+      <form class="booking-form" (ngSubmit)="onSubmit()">
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          [(ngModel)]="bookingData.name"
+          required
+        />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="bookingData.email"
+          required
+        />
+        <label for="date">Date:</label>
+        <input
+          type="date"
+          id="date"
+          name="date"
+          [(ngModel)]="bookingData.date"
+          required
+        />
+        <label for="time">Time:</label>
+        <input
+          type="time"
+          id="time"
+          name="time"
+          [(ngModel)]="bookingData.time"
+          required
+        />
+        <label for="partySize">Number of Guests:</label>
+        <input
+          type="number"
+          id="partySize"
+          name="partySize"
+          [(ngModel)]="bookingData.partySize"
+          min="1"
+          required
+        />
+        <button type="submit">Book Table</button>
+      </form>
+    </div>
+  </div>
+</div>
+</div>

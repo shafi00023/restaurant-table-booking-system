@@ -1,6 +1,7 @@
 <app-header></app-header>
+<div class="Main-dashboard-container">
 <app-sidebar></app-sidebar>
-<div class="container" style="padding: 71px 248px">
+<div class="container switch-tabs">
   <div class="row">
     <div class="col-md-12">
       <form class="booking-form" (ngSubmit)="updateBooking()">
@@ -28,16 +29,17 @@
             name="partySize"
           />
         </div>
-        <div>
+        <!-- <div>
           <label>Booking Status:</label>
           <input
             type="text"
             [(ngModel)]="bookingDetails.bookingStatus"
             name="bookingStatus"
           />
-        </div>
+        </div> -->
         <button type="submit">Update</button>
       </form>
     </div>
   </div>
+</div>
 </div>

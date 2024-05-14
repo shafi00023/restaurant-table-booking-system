@@ -9,12 +9,14 @@ import { ApiService } from './core/api/register/api.service';
 // import { BookTableComponent } from '../book-table/book-table.component';
 import { EditBookingComponent } from '../edit-booking/edit-booking.component';
 import { AdminLoginComponent } from '../admin-login/admin-login.component';
+import { BookTableComponent } from '../book-table/book-table.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: '/login', pathMatch: 'full' },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
     { path:'dashboard', component: DashboardComponent},
+    { path:'bookTable', component: BookTableComponent},
     { path: 'edit-booking', component: EditBookingComponent },
     { path: "adminlogin", component: AdminLoginComponent },
   ];
