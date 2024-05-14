@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { BookingService } from '../app/core/api/book-table/app.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
   styleUrl: './previous-booking.component.scss'
 })
 export class PreviousBookingComponent {
+  
   bookingData: any;
 
   constructor(private bookingService: BookingService,private router: Router) { }

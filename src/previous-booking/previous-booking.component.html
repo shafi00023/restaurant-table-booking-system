@@ -9,6 +9,7 @@
             <p><strong>Party Size:</strong> {{ booking.partySize }}</p>
             <p><strong>Booking Status:</strong> {{ booking.bookingStatus }}</p>
             <button (click)="editBooking(booking)">Edit</button>
+            <!-- <button (click)="setActiveItem('editBooking')">Edit</button> -->
         </div>
     </div>
     <div *ngIf="bookingData && bookingData.length === 0">

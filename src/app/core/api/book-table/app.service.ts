@@ -9,6 +9,7 @@ import { Observable } from 'rxjs';
 export class BookingService {
   private apiUrl = 'http://localhost:3000/api/book-table';
   private bookingURL = 'http://localhost:3000/api/getBooking';
+  private editBookingURL = 'http://localhost:3000/api/bookings';
 
   constructor(private http: HttpClient) { }
 
@@ -20,7 +21,7 @@ export class BookingService {
     return this.http.get<any[]>(this.bookingURL);
   }
   updateBooking(bookingId: string, updatedBooking: any): Observable<any> {
-    return this.http.put<any>(`${this.apiUrl}/${bookingId}`, updatedBooking);
+    return this.http.put<any>(`${this.editBookingURL}/${bookingId}`, updatedBooking);
   }
 
   getBookingById(bookingId: string): Observable<any> {
