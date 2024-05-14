@@ -11,3 +11,13 @@ body {
   padding: 0;
   height: 100vh;
 }
+.Main-dashboard-container {
+  display: flex;
+  .switch-tabs {
+    width: calc(100% - 270px);
+    background-color: #fff;
+    padding: 30px;
+    margin-left: 270px;
+    margin-top: 60px;
+  }
+}
