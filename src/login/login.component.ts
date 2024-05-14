@@ -21,9 +21,6 @@ export class LoginComponent {
   register() {
     this.router.navigate(["/register"]);
   }
-  adminlogin() {
-    this.router.navigate(["/adminlogin"]);
-  }
 
   login() {
     // Call the login service
@@ -42,5 +39,8 @@ export class LoginComponent {
           alert(JSON.stringify(error.error));
         }
       );
+  }
+  adminlogin() {
+    this.router.navigate(["/adminlogin"]);
   }
 }

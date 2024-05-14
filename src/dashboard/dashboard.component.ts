@@ -6,11 +6,11 @@ import { PreviousBookingComponent } from '../previous-booking/previous-booking.c
 import { BookTableComponent } from '../book-table/book-table.component';
 
 @Component({
-  selector: 'app-dashboard',
-  standalone: true,
-  imports: [HeaderComponent, SidebarComponent,CommonModule,PreviousBookingComponent ,BookTableComponent],
-  templateUrl: './dashboard.component.html',
-  styleUrl: './dashboard.component.scss'
+    selector: 'app-dashboard',
+    standalone: true,
+    templateUrl: './dashboard.component.html',
+    styleUrl: './dashboard.component.scss',
+    imports: [HeaderComponent, SidebarComponent, CommonModule, PreviousBookingComponent, BookTableComponent]
 })
 export class DashboardComponent {
   activeItem: string = 'dashboard'; 

@@ -66,15 +66,15 @@
     "contact": "7667564345"
   },
   {
-    "username": "",
-    "email": "",
-    "password": "",
-    "contact": ""
-  },
-  {
     "username": "komal",
     "email": "komal@gmail.com",
     "password": "komal",
+    "contact": "9876543210"
+  },
+  {
+    "username": "komalk",
+    "email": "komalk@gmail.com",
+    "password": "komalk",
     "contact": "9876543210"
   }
 ]
