@@ -6,7 +6,7 @@
     "date": "2024-05-15",
     "time": "08:36",
     "partySize": "8",
-    "bookingStatus": "booked"
+    "bookingStatus": "cancel"
   },
   {
     "bookingId": 687020,
@@ -15,7 +15,7 @@
     "date": "2024-05-10",
     "time": "20:45",
     "partySize": 5,
-    "bookingStatus": "Booked"
+    "bookingStatus": "cancel"
   },
   {
     "bookingId": 481191,
