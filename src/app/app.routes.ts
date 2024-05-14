@@ -7,7 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { ApiService } from './core/api/register/api.service';
 // import { BookTableComponent } from '../book-table/book-table.component';
-import { EditBookingComponent } from './edit-booking/edit-booking.component';
+import { EditBookingComponent } from '../edit-booking/edit-booking.component';
 import { AdminLoginComponent } from '../admin-login/admin-login.component';
 
 export const routes: Routes = [
