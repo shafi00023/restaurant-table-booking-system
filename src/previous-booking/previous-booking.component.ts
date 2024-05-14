@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { BookingService } from '../app/core/api/book-table/app.service';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
   styleUrl: './previous-booking.component.scss'
 })
 export class PreviousBookingComponent {
+  
   bookingData: any;
 
   constructor(private bookingService: BookingService,private router: Router) { }
@@ -18,17 +19,18 @@ export class PreviousBookingComponent {
   ngOnInit(): void {
     this.loadBookingData();
   }
-  editBooking(bookingId: any) {
-    console.log("edit booking clicked for booking id",bookingId);
-    this.router.navigate(['/booking-details', bookingId]);
+  editBooking(booking: any) {
+    console.log("edit booking clicked for booking id", booking.bookingId);
+    this.router.navigate(['/edit-booking', { booking: JSON.stringify(booking) }]);
   }
+  
 
   loadBookingData() {
     this.bookingService.getAllBooking().subscribe(
-      data => {
+      (data: any) => {
         this.bookingData = data;
       },
-      error => {
+      (error: any) => {
         console.error('Failed to fetch booking data:', error);
       }
     );
