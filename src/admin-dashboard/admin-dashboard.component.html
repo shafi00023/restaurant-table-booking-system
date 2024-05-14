@@ -1,0 +1,14 @@
+<app-header></app-header>
+<div class="Main-dashboard-container">
+  <app-admin-sidebar (changeActiveItem)="changeActiveItem($event)"></app-admin-sidebar>
+  <div class="switch-tabs">
+    <div *ngIf="activeItem === 'admindashboard'">
+      <app-admin-main></app-admin-main>
+    </div>
+
+    <div *ngIf="activeItem === 'adminviewbookings'">
+      <app-admin-view-bookings></app-admin-view-bookings>
+    </div>
+  </div>
+</div>
+

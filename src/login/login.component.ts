@@ -1,45 +1,46 @@
-import { CommonModule } from '@angular/common';
-import { HttpClient } from '@angular/common/http';
-import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { Router } from '@angular/router';
-import {  LoginService } from '../app/core/api/login/api.service';
-
+import { CommonModule } from "@angular/common";
+import { HttpClient } from "@angular/common/http";
+import { Component } from "@angular/core";
+import { FormsModule } from "@angular/forms";
+import { Router } from "@angular/router";
+import { LoginService } from "../app/core/api/login/api.service";
 
 @Component({
-  selector: 'app-login',
+  selector: "app-login",
   standalone: true,
-  imports: [FormsModule,CommonModule],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  imports: [FormsModule, CommonModule],
+  templateUrl: "./login.component.html",
+  styleUrl: "./login.component.scss",
 })
 export class LoginComponent {
-  constructor(private router: Router, private loginService: LoginService) { }
-  
-  email: string = '';
-  password: string = '';
-  errorMessage: string = '';
-  register(){
-    this.router.navigate(['/register']);
+  constructor(private router: Router, private loginService: LoginService) {}
+
+  email: string = "";
+  password: string = "";
+  errorMessage: string = "";
+  register() {
+    this.router.navigate(["/register"]);
+  }
+  adminlogin() {
+    this.router.navigate(["/adminlogin"]);
   }
 
   login() {
     // Call the login service
-    this.loginService.loginUser({ email: this.email, password: this.password })
+    this.loginService
+      .loginUser({ email: this.email, password: this.password })
       .subscribe(
-        response => {
+        (response) => {
           // Handle successful login
           console.log(response); // or navigate to another page
-          this.router.navigate(['/dashboard']);
+          this.router.navigate(["/dashboard"]);
         },
-        error => {
+        (error) => {
           // Handle login error
           this.errorMessage = error.error.message;
           console.log(error.error);
           alert(JSON.stringify(error.error));
-
         }
       );
   }
-
 }

@@ -1,0 +1,8 @@
+<div>
+  <div *ngIf="bookingData && bookingData.length > 0">
+    <div>Today's total number of bookings: {{ bookingData.length }}</div>
+  </div>
+  <div *ngIf="bookingData && bookingData.length === 0">
+    <p>No reservations for today.</p>
+  </div>
+</div>

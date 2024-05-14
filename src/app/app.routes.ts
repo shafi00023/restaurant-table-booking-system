@@ -8,6 +8,9 @@ import { HttpClientModule } from "@angular/common/http";
 import { ApiService } from "./core/api/register/api.service";
 import { BookTableComponent } from "../book-table/book-table.component";
 import { AdminLoginComponent } from "../admin-login/admin-login.component";
+import { AdminDashboardComponent } from "../admin-dashboard/admin-dashboard.component";
+import { AdminMainComponent } from "../admin-main/admin-main.component";
+import { AdminViewBookingsComponent } from "../admin-view-bookings/admin-view-bookings.component";
 
 export const routes: Routes = [
   { path: "", redirectTo: "/login", pathMatch: "full" },
@@ -16,6 +19,9 @@ export const routes: Routes = [
   { path: "dashboard", component: DashboardComponent },
   { path: "booking-details/:id", component: BookTableComponent },
   { path: "adminlogin", component: AdminLoginComponent },
+  { path: "admindashboard", component: AdminDashboardComponent },
+  { path: "adminmain", component: AdminMainComponent },
+  { path: "adminviewbookings", component: AdminViewBookingsComponent },
 ];
 
 @NgModule({

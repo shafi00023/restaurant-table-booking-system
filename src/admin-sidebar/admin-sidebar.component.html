@@ -1,0 +1,16 @@
+<div class="sidebar-wrapper">
+  <ul>
+    <li
+      [class.active]="activeItem === 'admindashboard'"
+      (click)="setActiveItem('admindashboard')"
+    >
+      <i class="fa-solid fa-gauge"></i>Dashboard
+    </li>
+    <li
+      [class.active]="activeItem === 'adminviewbookings'"
+      (click)="setActiveItem('adminviewbookings')"
+    >
+      <i class="fa-solid fa-utensils"></i>View Bookings
+    </li>
+  </ul>
+</div>
