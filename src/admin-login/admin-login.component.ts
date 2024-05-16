@@ -6,7 +6,7 @@ import { Router } from "@angular/router";
 import { LoginService } from "../app/core/api/login/api.service";
 
 @Component({
-  selector: "app-login",
+  selector: "app-admin-login",
   standalone: true,
   imports: [FormsModule, CommonModule],
   templateUrl: "./admin-login.component.html",
@@ -21,24 +21,13 @@ export class AdminLoginComponent {
   register() {
     this.router.navigate(["/register"]);
   }
-
-  adminlogin() {
-    // Call the login service
-    // this.loginService;
-    this.router.navigate(["/adminlogin"]);
-    //   .loginUser({ email: this.email, password: this.password })
-    //   .subscribe(
-    //     (response) => {
-    //       // Handle successful login
-    //       console.log(response); // or navigate to another page
-    //       this.router.navigate(["/dashboard"]);
-    //     },
-    //     (error) => {
-    //       // Handle login error
-    //       this.errorMessage = error.error.message;
-    //       console.log(error.error);
-    //       alert(JSON.stringify(error.error));
-    //     }
-    //   );
+  admindashboard() {
+    this.router.navigate(["/admindashboard"]);
+  }
+  adminmain() {
+    this.router.navigate(["/adminmain"]);
+  }
+  adminviewbookings() {
+    this.router.navigate(["/adminviewbookings"]);
   }
 }

@@ -70,5 +70,11 @@
     "email": "komal@gmail.com",
     "password": "komal",
     "contact": "9876543210"
+  },
+  {
+    "username": "komalk",
+    "email": "komalk@gmail.com",
+    "password": "komalk",
+    "contact": "9876543210"
   }
 ]

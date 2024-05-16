@@ -40,7 +40,6 @@ export class LoginComponent {
         }
       );
   }
-
   adminlogin() {
     this.router.navigate(["/adminlogin"]);
   }

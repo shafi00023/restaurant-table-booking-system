@@ -52,5 +52,21 @@
     "time": "12:59",
     "partySize": 5,
     "bookingStatus": "Confirmed"
+  },
+  {
+    "bookingId": 376733,
+    "name": "Komal",
+    "email": "komal@gmail.com",
+    "date": "2024-05-14",
+    "time": "21:00",
+    "partySize": 3
+  },
+  {
+    "bookingId": 871217,
+    "name": "KomalK",
+    "email": "komalk@gmail.com",
+    "date": "2024-05-14",
+    "time": "21:00",
+    "partySize": 4
   }
 ]
