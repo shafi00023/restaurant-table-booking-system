@@ -68,5 +68,14 @@
     "date": "2024-05-14",
     "time": "21:00",
     "partySize": 4
+  },
+  {
+    "bookingId": 192655,
+    "name": "",
+    "email": "",
+    "date": "",
+    "time": "",
+    "partySize": "",
+    "bookingStatus": "cancel"
   }
 ]

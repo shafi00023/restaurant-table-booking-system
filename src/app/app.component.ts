@@ -9,6 +9,7 @@ import { AdminLoginComponent } from "../admin-login/admin-login.component";
 import { AdminDashboardComponent } from "../admin-dashboard/admin-dashboard.component";
 import { AdminMainComponent } from "../admin-main/admin-main.component";
 import { AdminViewBookingsComponent } from "../admin-view-bookings/admin-view-bookings.component";
+import { AdminCreateTableComponent } from "../admin-create-table/admin-create-table.component";
 
 @Component({
   selector: "app-root",
@@ -24,6 +25,7 @@ import { AdminViewBookingsComponent } from "../admin-view-bookings/admin-view-bo
     AdminDashboardComponent,
     AdminMainComponent,
     AdminViewBookingsComponent,
+    AdminCreateTableComponent,
   ],
   templateUrl: "./app.component.html",
   styleUrl: "./app.component.scss",

@@ -22,12 +22,19 @@ export class AdminLoginComponent {
     this.router.navigate(["/register"]);
   }
   admindashboard() {
-    this.router.navigate(["/admindashboard"]);
+    if (this.email === "admin@gmail.com" && this.password === "admin") {
+      this.router.navigate(["/admindashboard"]);
+    } else {
+      return alert("Invalid email or password");
+    }
   }
   adminmain() {
     this.router.navigate(["/adminmain"]);
   }
   adminviewbookings() {
     this.router.navigate(["/adminviewbookings"]);
+  }
+  admincreatetable() {
+    this.router.navigate(["/admincreatetable"]);
   }
 }

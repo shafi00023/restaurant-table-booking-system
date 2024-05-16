@@ -12,5 +12,11 @@
     >
       <i class="fa-solid fa-utensils"></i>View Bookings
     </li>
+    <li
+      [class.active]="activeItem === 'admincreatetable'"
+      (click)="setActiveItem('admincreatetable')"
+    >
+      <i class="fa-solid fa-plus"></i> Create Table
+    </li>
   </ul>
 </div>

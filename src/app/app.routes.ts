@@ -13,6 +13,7 @@ import { BookTableComponent } from "../book-table/book-table.component";
 import { AdminDashboardComponent } from "../admin-dashboard/admin-dashboard.component";
 import { AdminMainComponent } from "../admin-main/admin-main.component";
 import { AdminViewBookingsComponent } from "../admin-view-bookings/admin-view-bookings.component";
+import { AdminCreateTableComponent } from "../admin-create-table/admin-create-table.component";
 
 export const routes: Routes = [
   { path: "", redirectTo: "/login", pathMatch: "full" },
@@ -25,6 +26,7 @@ export const routes: Routes = [
   { path: "admindashboard", component: AdminDashboardComponent },
   { path: "adminmain", component: AdminMainComponent },
   { path: "adminviewbookings", component: AdminViewBookingsComponent },
+  { path: "admincreatetable", component: AdminCreateTableComponent },
 ];
 
 @NgModule({

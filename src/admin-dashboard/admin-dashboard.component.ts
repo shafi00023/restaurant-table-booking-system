@@ -4,6 +4,7 @@ import { CommonModule } from "@angular/common";
 import { AdminSidebarComponent } from "../admin-sidebar/admin-sidebar.component";
 import { AdminMainComponent } from "../admin-main/admin-main.component";
 import { AdminViewBookingsComponent } from "../admin-view-bookings/admin-view-bookings.component";
+import { AdminCreateTableComponent } from "../admin-create-table/admin-create-table.component";
 
 @Component({
   selector: "app-admin-dashboard",
@@ -14,6 +15,7 @@ import { AdminViewBookingsComponent } from "../admin-view-bookings/admin-view-bo
     CommonModule,
     AdminMainComponent,
     AdminViewBookingsComponent,
+    AdminCreateTableComponent,
   ],
   templateUrl: "./admin-dashboard.component.html",
   styleUrl: "./admin-dashboard.component.scss",
