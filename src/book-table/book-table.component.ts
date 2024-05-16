@@ -20,7 +20,6 @@ export class BookTableComponent {
     time: "",
     partySize: "",
   };
-
   constructor(private bookingService: BookingService) {}
 
   onSubmit() {
@@ -43,4 +42,5 @@ export class BookTableComponent {
       partySize: "",
     };
   }
+
 }
