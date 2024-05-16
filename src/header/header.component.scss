@@ -1,6 +1,6 @@
 header {
   height: 60px;
-  background-color: #a9acaf;
+  background: linear-gradient(to right, #007bff, #6c5ce7);
   color: #fff;
   padding: 0 35px;
   position: fixed;
@@ -18,19 +18,17 @@ header {
       cursor: pointer;
     }
     .dropdown-menu {
-      background-color: #ffffff;
       height: 40px;
       position: absolute;
       margin-top: 70px;
       width: 130px;
+      display: block;
       a {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 40px;
         color: red;
         cursor: pointer;
-        box-shadow: 0px 2px 6px 0px;
       }
     }
     span {

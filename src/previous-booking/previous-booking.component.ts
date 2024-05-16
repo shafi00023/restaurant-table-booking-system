@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output } from "@angular/core";
+import { Component } from "@angular/core";
 import { BookingService } from "../app/core/api/book-table/app.service";
 import { CommonModule } from "@angular/common";
 import { Router } from "@angular/router";
@@ -42,12 +42,13 @@ export class PreviousBookingComponent {
       // If user confirms, update bookingStatus to 'cancel'
       booking.bookingStatus = "cancel";
       // this.updateBooking();
-      this.bookingService.updateBooking(booking.bookingId, booking).subscribe(updatedBooking => {
-        console.log('Booking Canceled successfully:', updatedBooking);
-        // this.snackBar.open('Booking updated successfully', 'Close', { duration: 3000 });
-        alert("booking canceled")
-      })
+      this.bookingService
+        .updateBooking(booking.bookingId, booking)
+        .subscribe((updatedBooking) => {
+          console.log("Booking Canceled successfully:", updatedBooking);
+          // this.snackBar.open('Booking updated successfully', 'Close', { duration: 3000 });
+          alert("booking canceled");
+        });
     }
   }
- 
 }
