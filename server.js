@@ -135,6 +135,38 @@ app.get("/api/getBooking", (req, res) => {
   res.json(booking);
 });
 
+// Read existing tables from db.json file
+let tables = JSON.parse(fs.readFileSync("tables.json", "utf8"));
+
+// Function to generate a unique ID
+function generateId() {
+  // Find the maximum ID in the existing tables
+  const maxId = tables.reduce((max, table) => (table.id > max ? table.id : max), 0);
+  // Increment the maximum ID to generate a new unique ID
+  return maxId + 1;
+}
+
+app.post("/api/createTable", (req, res) => {
+  // Extract data from request body
+  const { tableNo, capacity } = req.body;
+
+  // Generate a unique ID
+  const id = generateId();
+
+  // Create new table object
+  const newTable = { id, tableNo, capacity };
+
+  // Add new table to tables array
+  tables.push(newTable);
+
+  // Write updated tables array back to db.json file
+  fs.writeFileSync("tables.json", JSON.stringify(tables, null, 2), "utf8");
+
+  // Return the newly created table
+  res.status(201).json({ message: "Table Created successfully" });
+});
+
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
