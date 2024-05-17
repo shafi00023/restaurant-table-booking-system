@@ -141,7 +141,10 @@ let tables = JSON.parse(fs.readFileSync("tables.json", "utf8"));
 // Function to generate a unique ID
 function generateId() {
   // Find the maximum ID in the existing tables
-  const maxId = tables.reduce((max, table) => (table.id > max ? table.id : max), 0);
+  const maxId = tables.reduce(
+    (max, table) => (table.id > max ? table.id : max),
+    0
+  );
   // Increment the maximum ID to generate a new unique ID
   return maxId + 1;
 }
@@ -165,7 +168,6 @@ app.post("/api/createTable", (req, res) => {
   // Return the newly created table
   res.status(201).json({ message: "Table Created successfully" });
 });
-
 
 // Start the server
 app.listen(PORT, () => {

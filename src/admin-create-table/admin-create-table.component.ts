@@ -1,9 +1,9 @@
 import { Component } from "@angular/core";
-// import { BookingService } from "../app/core/api/book-table/app.service";
 import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { HeaderComponent } from "../header/header.component";
 import { AdminSidebarComponent } from "../admin-sidebar/admin-sidebar.component";
+import { BookingService } from "../app/core/api/book-table/app.service";
 
 @Component({
   selector: "app-admin-create-table",
@@ -14,13 +14,27 @@ import { AdminSidebarComponent } from "../admin-sidebar/admin-sidebar.component"
 })
 export class AdminCreateTableComponent {
   createtableData = {
-    tableno: "",
+    tableNo: "",
     capacity: "",
   };
 
+  constructor(private bookingService: BookingService) {}
+
+  onSubmit() {
+    this.bookingService.createTable(this.createtableData).subscribe(
+      (data) => {
+        alert("Table created successfully");
+        this.clearInputs();
+      },
+      (error) => {
+        console.error("Failed to create table:", error);
+      }
+    );
+  }
+
   clearInputs() {
     this.createtableData = {
-      tableno: "",
+      tableNo: "",
       capacity: "",
     };
   }

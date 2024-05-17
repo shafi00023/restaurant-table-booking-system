@@ -34,7 +34,7 @@ export class AdminLoginComponent {
   adminviewbookings() {
     this.router.navigate(["/adminviewbookings"]);
   }
-  admincreatetable() {
-    this.router.navigate(["/admincreatetable"]);
+  createtable() {
+    this.router.navigate(["/createtable"]);
   }
 }

@@ -26,7 +26,7 @@ export const routes: Routes = [
   { path: "admindashboard", component: AdminDashboardComponent },
   { path: "adminmain", component: AdminMainComponent },
   { path: "adminviewbookings", component: AdminViewBookingsComponent },
-  { path: "admincreatetable", component: AdminCreateTableComponent },
+  { path: "createtable", component: AdminCreateTableComponent },
 ];
 
 @NgModule({
