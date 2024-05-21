@@ -6,8 +6,8 @@
     "date": "2024-05-15",
     "time": "08:36 AM",
     "partySize": "8",
-    "tableno":"1",
-    "capacity":"9",
+    "tableno": "1",
+    "capacity": "9",
     "bookingStatus": "cancel"
   },
   {
@@ -17,8 +17,8 @@
     "date": "2024-05-10",
     "time": "20:45 PM",
     "partySize": 5,
-    "tableno":"2",
-    "capacity":"5",
+    "tableno": "2",
+    "capacity": "5",
     "bookingStatus": "cancel"
   },
   {
@@ -28,8 +28,8 @@
     "date": "2024-05-15",
     "time": "18:00 PM",
     "partySize": 3,
-    "tableno":"3",
-    "capacity":"6",
+    "tableno": "3",
+    "capacity": "6",
     "bookingStatus": "Booked"
   },
   {
@@ -39,8 +39,8 @@
     "date": "2024-05-13",
     "time": "1: 00 PM",
     "partySize": "2",
-    "tableno":"4",
-    "capacity":"7",
+    "tableno": "4",
+    "capacity": "7",
     "bookingStatus": "Booked"
   },
   {
@@ -50,8 +50,8 @@
     "date": "demo123",
     "time": "11:00 AM",
     "partySize": "2",
-    "tableno":"5",
-    "capacity":"9",
+    "tableno": "5",
+    "capacity": "9",
     "bookingStatus": "Confirmed"
   },
   {
@@ -61,8 +61,8 @@
     "date": "2024-12-31",
     "time": "12:59 PM",
     "partySize": 5,
-    "tableno":"6",
-    "capacity":"7",
+    "tableno": "6",
+    "capacity": "7",
     "bookingStatus": "Confirmed"
   },
   {
@@ -71,8 +71,8 @@
     "email": "komal@gmail.com",
     "date": "2024-05-14",
     "time": "21:00 AM",
-    "tableno":"7",
-    "capacity":"3",
+    "tableno": "7",
+    "capacity": "3",
     "partySize": 3
   },
   {
@@ -81,8 +81,8 @@
     "email": "komalk@gmail.com",
     "date": "2024-05-14",
     "time": "21:00 PM",
-    "tableno":"8",
-    "capacity":"9",
+    "tableno": "8",
+    "capacity": "9",
     "partySize": 4
   },
   {
@@ -92,8 +92,20 @@
     "date": "",
     "time": "",
     "partySize": "",
-    "tableno":"9",
-    "capacity":"8",
+    "tableno": "9",
+    "capacity": "8",
     "bookingStatus": "cancel"
+  },
+  {
+    "bookingId": 414225,
+    "date": "2024-12-31",
+    "time": "12:59",
+    "partySize": 2
+  },
+  {
+    "bookingId": 601412,
+    "date": "2024-12-31",
+    "time": "12:59",
+    "partySize": 2
   }
 ]
