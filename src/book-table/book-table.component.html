@@ -15,13 +15,13 @@
           <input type="time" id="time" name="time" [(ngModel)]="bookingData.time" required />
           <label for="partySize">Number of Guests:</label>
           <input type="number" id="partySize" name="partySize" [(ngModel)]="bookingData.partySize" min="1" required />
-          <button type="button">Check Available tables</button>
-          <label for="select-table">Available Tables - Select Your Table</label>
-          <select>
-            <option value="table1">Table 1</option>
-            <option value="table2">Table 2</option>
-            <option value="table3">Table 3</option>
-          </select>
+          <button type="button" (click)="checkAvailability()">Check Available tables</button>
+          <div *ngIf="availableTables && availableTables.length > 0">
+            <label for="select-table">Available Tables - Select Your Table</label>
+            <select id="select-table" [(ngModel)]="selectedTable" name="selectedTable" required>
+              <option *ngFor="let table of availableTables" [value]="table">{{ table }}</option>
+            </select>
+          </div>
           <button type="submit">Book Table</button>
         </form>
       </div>
