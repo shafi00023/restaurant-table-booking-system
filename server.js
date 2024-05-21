@@ -169,6 +169,29 @@ app.post("/api/createTable", (req, res) => {
   res.status(201).json({ message: "Table Created successfully" });
 });
 
+app.post("/api/checkAvailability", (req, res) => {
+  const { date, time, partySize } = req.body;
+
+  const bookingsOnDateTime = bookings.filter(
+    (booking) => booking.date === date && booking.time === time
+  );
+
+  const availableTables = tables.filter((table) => {
+    return table.capacity >= partySize;
+  });
+
+  const overlappingTables = availableTables.filter((table) => {
+    return bookingsOnDateTime.some(
+      (booking) => booking.tableno === table.tableNo
+    );
+  });
+
+  const filteredTables = availableTables.filter(
+    (table) => !overlappingTables.includes(table)
+  );
+
+  res.status(200).json(filteredTables.map((table) => table.tableNo));
+});
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
