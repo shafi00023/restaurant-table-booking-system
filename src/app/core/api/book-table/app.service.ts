@@ -11,6 +11,7 @@ export class BookingService {
   private bookingURL = "http://localhost:3000/api/getBooking";
   private editBookingURL = "http://localhost:3000/api/bookings";
   private createTableURL = "http://localhost:3000/api/createTable";
+  private checkAvailabilityURL = 'http://localhost:3000/api/checkAvailability';
 
   constructor(private http: HttpClient) {}
 
@@ -34,5 +35,9 @@ export class BookingService {
 
   getBookingById(bookingId: string): Observable<any> {
     return this.http.get<any>(`${this.apiUrl}/${bookingId}`);
+  }
+
+  checkAvailability(bookingData: any): Observable<string[]> {
+    return this.http.post<string[]>(this.checkAvailabilityURL, bookingData);
   }
 }
