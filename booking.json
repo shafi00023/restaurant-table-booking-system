@@ -8,7 +8,7 @@
     "partySize": "8",
     "tableno": "1",
     "capacity": "9",
-    "bookingStatus": "cancel"
+    "bookingStatus": "Canceled"
   },
   {
     "bookingId": 687020,
@@ -19,7 +19,7 @@
     "partySize": 5,
     "tableno": "2",
     "capacity": "5",
-    "bookingStatus": "cancel"
+    "bookingStatus": "Canceled"
   },
   {
     "bookingId": 481191,
@@ -30,7 +30,7 @@
     "partySize": 3,
     "tableno": "3",
     "capacity": "6",
-    "bookingStatus": "Booked"
+    "bookingStatus": "Confirmed"
   },
   {
     "bookingId": 968765,
@@ -41,7 +41,7 @@
     "partySize": "2",
     "tableno": "4",
     "capacity": "7",
-    "bookingStatus": "Booked"
+    "bookingStatus": "Confirmed"
   },
   {
     "bookingId": 814964,
@@ -73,7 +73,8 @@
     "time": "21:00 AM",
     "tableno": "7",
     "capacity": "3",
-    "partySize": 3
+    "partySize": 3,
+    "bookingStatus": "Canceled"
   },
   {
     "bookingId": 871217,
@@ -83,29 +84,27 @@
     "time": "21:00 PM",
     "tableno": "8",
     "capacity": "9",
-    "partySize": 4
+    "partySize": 4,
+    "bookingStatus": "Confirmed"
   },
   {
     "bookingId": 192655,
-    "name": "",
-    "email": "",
-    "date": "",
-    "time": "",
-    "partySize": "",
+    "name": "Sample",
+    "email": "sample@mail.com",
+    "date": "2024-05-22",
+    "time": "20:00",
+    "partySize": 4,
     "tableno": "9",
     "capacity": "8",
-    "bookingStatus": "cancel"
+    "bookingStatus": "Confirmed"
   },
   {
-    "bookingId": 414225,
-    "date": "2024-12-31",
-    "time": "12:59",
-    "partySize": 2
-  },
-  {
-    "bookingId": 601412,
-    "date": "2024-12-31",
-    "time": "12:59",
-    "partySize": 2
+    "bookingId": 848699,
+    "name": "Tablename",
+    "email": "table@mail.com",
+    "date": "2024-05-21",
+    "time": "20:00",
+    "partySize": 3,
+    "bookingStatus": "Confirmed"
   }
 ]

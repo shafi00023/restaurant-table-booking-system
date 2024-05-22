@@ -1,7 +1,6 @@
 import { Component } from "@angular/core";
 import { BookingService } from "../app/core/api/book-table/app.service";
 import { CommonModule } from "@angular/common";
-import { Router } from "@angular/router";
 
 @Component({
   selector: "app-admin-view-bookings",
@@ -12,15 +11,12 @@ import { Router } from "@angular/router";
 })
 export class AdminViewBookingsComponent {
   bookingData: any;
+  bookingDetails: any;
 
-  constructor(private bookingService: BookingService, private router: Router) {}
+  constructor(private bookingService: BookingService) {}
 
   ngOnInit(): void {
     this.loadBookingData();
-  }
-  editBooking(bookingId: any) {
-    console.log("edit booking clicked for booking id", bookingId);
-    this.router.navigate(["/booking-details", bookingId]);
   }
 
   loadBookingData() {
@@ -32,5 +28,23 @@ export class AdminViewBookingsComponent {
         console.error("Failed to fetch booking data:", error);
       }
     );
+  }
+
+  confirm(booking: any) {
+    booking.bookingStatus = "Confirmed";
+    this.bookingService
+      .updateBooking(booking.bookingId, booking)
+      .subscribe((updatedBooking) => {
+        alert("Booking confirmed");
+      });
+  }
+
+  cancel(booking: any) {
+    booking.bookingStatus = "Canceled";
+    this.bookingService
+      .updateBooking(booking.bookingId, booking)
+      .subscribe((updatedBooking) => {
+        alert("Booking cancelled");
+      });
   }
 }
