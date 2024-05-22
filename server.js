@@ -171,7 +171,8 @@ app.post("/api/createTable", (req, res) => {
 
 app.get("/api/checkAvailability", (req, res) => {
   const bookings = JSON.parse(fs.readFileSync("booking.json", "utf8"));
-  const { date, time, partySize } = req.body;
+  // const { date, time, partySize } = req.body;
+  const { date, time, partySize } = req.query;
 
   const bookingsOnDateTime = bookings.filter(
     (booking) => booking.date === date && booking.time === time
